@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "GNU",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "/home/betelgeuse/CLionProjects/ProjetoPooCpp/cmake-build-debug",
+	"dir-cur-src" : "/home/betelgeuse/CLionProjects/ProjetoPooCpp",
+	"dir-top-bld" : "/home/betelgeuse/CLionProjects/ProjetoPooCpp/cmake-build-debug",
+	"dir-top-src" : "/home/betelgeuse/CLionProjects/ProjetoPooCpp",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/home/betelgeuse/CLionProjects/ProjetoPooCpp/cmake-build-debug/CMakeFiles/ProjetoPooCpp.dir"
+}
