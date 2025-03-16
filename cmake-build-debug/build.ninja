@@ -66,7 +66,143 @@ build CMakeFiles/ProjetoPooCpp.dir/main.cpp.o: CXX_COMPILER__ProjetoPooCpp_scann
   TARGET_PDB = ProjetoPooCpp.pdb
   dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
 
-build CMakeFiles/ProjetoPooCpp.dir/CXX.dd | /home/betelgeuse/CLionProjects/ProjetoPooCpp/cmake-build-debug/CMakeFiles/ProjetoPooCpp.dir/CXXModules.json CMakeFiles/ProjetoPooCpp.dir/main.cpp.o.modmap: CXX_DYNDEP__ProjetoPooCpp_Debug CMakeFiles/ProjetoPooCpp.dir/main.cpp.o.ddi | /home/betelgeuse/CLionProjects/ProjetoPooCpp/cmake-build-debug/CMakeFiles/ProjetoPooCpp.dir/CXXDependInfo.json
+build CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.ddi: CXX_SCAN__ProjetoPooCpp_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesSistema/Pessoa.cpp || cmake_object_order_depends_target_ProjetoPooCpp
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.ddi.i
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o: CXX_COMPILER__ProjetoPooCpp_scanned_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesSistema/Pessoa.cpp | CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.modmap || cmake_object_order_depends_target_ProjetoPooCpp CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema
+  TARGET_COMPILE_PDB = CMakeFiles/ProjetoPooCpp.dir/
+  TARGET_PDB = ProjetoPooCpp.pdb
+  dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.ddi: CXX_SCAN__ProjetoPooCpp_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesSistema/PessoaFisica.cpp || cmake_object_order_depends_target_ProjetoPooCpp
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.ddi.i
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o: CXX_COMPILER__ProjetoPooCpp_scanned_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesSistema/PessoaFisica.cpp | CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.modmap || cmake_object_order_depends_target_ProjetoPooCpp CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema
+  TARGET_COMPILE_PDB = CMakeFiles/ProjetoPooCpp.dir/
+  TARGET_PDB = ProjetoPooCpp.pdb
+  dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.ddi: CXX_SCAN__ProjetoPooCpp_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesSistema/PessoaJuridica.cpp || cmake_object_order_depends_target_ProjetoPooCpp
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.ddi.i
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o: CXX_COMPILER__ProjetoPooCpp_scanned_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesSistema/PessoaJuridica.cpp | CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.modmap || cmake_object_order_depends_target_ProjetoPooCpp CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProjetoPooCpp.dir/ClassesSistema
+  TARGET_COMPILE_PDB = CMakeFiles/ProjetoPooCpp.dir/
+  TARGET_PDB = ProjetoPooCpp.pdb
+  dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.ddi: CXX_SCAN__ProjetoPooCpp_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesLeitura/PlanilhaPessoas.cpp || cmake_object_order_depends_target_ProjetoPooCpp
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.ddi.i
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o: CXX_COMPILER__ProjetoPooCpp_scanned_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesLeitura/PlanilhaPessoas.cpp | CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.modmap || cmake_object_order_depends_target_ProjetoPooCpp CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura
+  TARGET_COMPILE_PDB = CMakeFiles/ProjetoPooCpp.dir/
+  TARGET_PDB = ProjetoPooCpp.pdb
+  dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.ddi: CXX_SCAN__ProjetoPooCpp_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesAjudantes/DateUtils.cpp || cmake_object_order_depends_target_ProjetoPooCpp
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.ddi.i
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o: CXX_COMPILER__ProjetoPooCpp_scanned_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesAjudantes/DateUtils.cpp | CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.modmap || cmake_object_order_depends_target_ProjetoPooCpp CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes
+  TARGET_COMPILE_PDB = CMakeFiles/ProjetoPooCpp.dir/
+  TARGET_PDB = ProjetoPooCpp.pdb
+  dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.ddi: CXX_SCAN__ProjetoPooCpp_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesAjudantes/NumberUtils.cpp || cmake_object_order_depends_target_ProjetoPooCpp
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.ddi.i
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o: CXX_COMPILER__ProjetoPooCpp_scanned_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesAjudantes/NumberUtils.cpp | CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.modmap || cmake_object_order_depends_target_ProjetoPooCpp CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes
+  TARGET_COMPILE_PDB = CMakeFiles/ProjetoPooCpp.dir/
+  TARGET_PDB = ProjetoPooCpp.pdb
+  dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.ddi: CXX_SCAN__ProjetoPooCpp_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesAjudantes/NumPunctPTBR.cpp || cmake_object_order_depends_target_ProjetoPooCpp
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.ddi.i
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o: CXX_COMPILER__ProjetoPooCpp_scanned_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesAjudantes/NumPunctPTBR.cpp | CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.modmap || cmake_object_order_depends_target_ProjetoPooCpp CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes
+  TARGET_COMPILE_PDB = CMakeFiles/ProjetoPooCpp.dir/
+  TARGET_PDB = ProjetoPooCpp.pdb
+  dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.ddi: CXX_SCAN__ProjetoPooCpp_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesAjudantes/Tokenizer.cpp || cmake_object_order_depends_target_ProjetoPooCpp
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.ddi.i
+
+build CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o: CXX_COMPILER__ProjetoPooCpp_scanned_Debug /home/betelgeuse/CLionProjects/ProjetoPooCpp/ClassesAjudantes/Tokenizer.cpp | CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.modmap || cmake_object_order_depends_target_ProjetoPooCpp CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+  DEP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes
+  TARGET_COMPILE_PDB = CMakeFiles/ProjetoPooCpp.dir/
+  TARGET_PDB = ProjetoPooCpp.pdb
+  dyndep = CMakeFiles/ProjetoPooCpp.dir/CXX.dd
+
+build CMakeFiles/ProjetoPooCpp.dir/CXX.dd | /home/betelgeuse/CLionProjects/ProjetoPooCpp/cmake-build-debug/CMakeFiles/ProjetoPooCpp.dir/CXXModules.json CMakeFiles/ProjetoPooCpp.dir/main.cpp.o.modmap CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.modmap CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.modmap CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.modmap CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.modmap CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.modmap CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.modmap CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.modmap CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.modmap: CXX_DYNDEP__ProjetoPooCpp_Debug CMakeFiles/ProjetoPooCpp.dir/main.cpp.o.ddi CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o.ddi CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o.ddi CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o.ddi CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o.ddi CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o.ddi CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o.ddi CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o.ddi CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o.ddi | /home/betelgeuse/CLionProjects/ProjetoPooCpp/cmake-build-debug/CMakeFiles/ProjetoPooCpp.dir/CXXDependInfo.json
 
 
 # =============================================================================
@@ -76,7 +212,7 @@ build CMakeFiles/ProjetoPooCpp.dir/CXX.dd | /home/betelgeuse/CLionProjects/Proje
 #############################################
 # Link the executable ProjetoPooCpp
 
-build ProjetoPooCpp: CXX_EXECUTABLE_LINKER__ProjetoPooCpp_Debug CMakeFiles/ProjetoPooCpp.dir/main.cpp.o
+build ProjetoPooCpp: CXX_EXECUTABLE_LINKER__ProjetoPooCpp_Debug CMakeFiles/ProjetoPooCpp.dir/main.cpp.o CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/Pessoa.cpp.o CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaFisica.cpp.o CMakeFiles/ProjetoPooCpp.dir/ClassesSistema/PessoaJuridica.cpp.o CMakeFiles/ProjetoPooCpp.dir/ClassesLeitura/PlanilhaPessoas.cpp.o CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/DateUtils.cpp.o CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumberUtils.cpp.o CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/NumPunctPTBR.cpp.o CMakeFiles/ProjetoPooCpp.dir/ClassesAjudantes/Tokenizer.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/ProjetoPooCpp.dir
   POST_BUILD = :
