@@ -15,7 +15,7 @@ namespace Leitura {
 
 class PlanilhaPessoas {
 public:
-    static list<Sistema::PessoaFisica>  lePlanilhaPessoas(const std::string &pasta);
+    static list<Sistema::PessoaFisica*>  lePlanilhaPessoas(const std::string &pasta);
 };
 
 } // Leitura

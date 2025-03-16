@@ -32,6 +32,8 @@ public:
           gastos(gastos) {
     }
 
+    ~PessoaFisica() = default;
+
     void addToList();
 
     void imprimeSujeito();

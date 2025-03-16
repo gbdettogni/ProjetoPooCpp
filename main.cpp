@@ -11,9 +11,10 @@ using namespace Sistema;
 int main() {
     // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
     // <b>lang</b> variable name to see how CLion can help you rename it.
-    list<PessoaFisica> lista = Leitura::PlanilhaPessoas::lePlanilhaPessoas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/");
-    for (PessoaFisica pf : lista) {
-        pf.imprimeSujeito();
+    list<PessoaFisica*> lista = Leitura::PlanilhaPessoas::lePlanilhaPessoas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/");
+    for (auto item:lista) {
+        item->imprimeSujeito();
+        delete item;
     }
     return 0;
 }
