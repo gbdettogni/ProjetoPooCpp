@@ -18,10 +18,12 @@ private:
 
 public:
      PessoaJuridica(const std::string &id, const std::string &nome, const std::string &telefone,
-          const std::string &endereco, bool prestador, double valor_recebido, const std::string &cnpj)
+          const std::string &endereco, const std::string &cnpj)
           : Pessoa(id, nome, telefone, endereco),
             cnpj(cnpj) {
      }
+
+     void imprimeSujeito() const;
 };
 
 } // Sistema

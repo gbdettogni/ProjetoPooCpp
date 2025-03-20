@@ -17,8 +17,8 @@
 using namespace Sistema;
 
 namespace Leitura {
-    list<PessoaFisica*> PlanilhaPessoas::lePlanilhaPessoas(const std::string &pasta) {
-        list<PessoaFisica*> pessoasFisicas;
+    void PlanilhaPessoas::lePlanilhaPessoas(const std::string &pasta, Controle* con) {
+        list<PessoaFisica*> pessoasFisicas = con->pessoas_fisicas();
 
         fstream arq;
         arq.open(pasta + "pessoas.csv", std::ios::in);
@@ -47,11 +47,16 @@ namespace Leitura {
                         auto pf = new PessoaFisica(id, nome, telefone, endereco, dataNascimento, cpf, poupanca,
                                                       salario, gastos);
 
-                        pessoasFisicas.push_back(pf);
+                        con->add(pf);
+                    }else{       //dados adicionais PessoaFísica
+                        string cnpj = t.next();
+                        if (!tipo.compare("J")) {
+                            auto *pj = new PessoaJuridica(id, nome, telefone, endereco, cnpj);
+                            con->add(pj);
+                        }
                     }
                 }
             }
         }
-        return pessoasFisicas;
     }
 } // Leitura

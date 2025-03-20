@@ -16,4 +16,6 @@ add_executable(ProjetoPooCpp main.cpp
         ClassesAjudantes/NumberUtils.cpp
         ClassesAjudantes/NumPunctPTBR.hpp
         ClassesAjudantes/NumPunctPTBR.cpp
-        ClassesAjudantes/Tokenizer.cpp)
+        ClassesAjudantes/Tokenizer.cpp
+        ClassesSistema/Controle.cpp
+        ClassesSistema/Controle.h)

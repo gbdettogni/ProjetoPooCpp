@@ -6,6 +6,8 @@
 #define PLANILHAPESSOAS_H
 #include <list>
 #include <string>
+
+#include "../ClassesSistema/Controle.h"
 #include "../ClassesSistema/PessoaFisica.h"
 
 
@@ -15,7 +17,7 @@ namespace Leitura {
 
 class PlanilhaPessoas {
 public:
-    static list<Sistema::PessoaFisica*>  lePlanilhaPessoas(const std::string &pasta);
+    static void lePlanilhaPessoas(const std::string &pasta, Sistema::Controle*);
 };
 
 } // Leitura

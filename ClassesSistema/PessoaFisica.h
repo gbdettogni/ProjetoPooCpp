@@ -13,7 +13,6 @@ namespace Sistema {
 
 class PessoaFisica: public Pessoa {
 private:
-    static std::list<PessoaFisica> pessoasFisicas;
     time_t dataNascimento;
     std::string cpf;
     double poupanca;
