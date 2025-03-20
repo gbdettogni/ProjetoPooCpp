@@ -10,6 +10,7 @@
 #include "../ClassesAjudantes/DateUtils.hpp"
 #include "../ClassesAjudantes/NumberUtils.hpp"
 #include "../ClassesSistema/PessoaFisica.h"
+#include "../ClassesSistema/Loja.h"
 
 #include <fstream>
 #include <iostream>
@@ -18,8 +19,6 @@ using namespace Sistema;
 
 namespace Leitura {
     void PlanilhaPessoas::lePlanilhaPessoas(const std::string &pasta, Controle* con) {
-        list<PessoaFisica*> pessoasFisicas = con->pessoas_fisicas();
-
         fstream arq;
         arq.open(pasta + "pessoas.csv", std::ios::in);
         string linha;
@@ -37,7 +36,7 @@ namespace Leitura {
                     if(!tipo.compare("F")){       //dados adicionais PessoaFísica
                         string cpf = t.next();
 
-                        time_t dataNascimento = cpp_util::parseDate(cpf, cpp_util::DATE_FORMAT_PT_BR_SHORT);
+                        time_t dataNascimento = cpp_util::parseDate(t.next(), cpp_util::DATE_FORMAT_PT_BR_SHORT);
 
                         double poupanca, salario, gastos;
                             poupanca = parseDouble(t.next(), LOCALE_PT_BR);
@@ -53,6 +52,10 @@ namespace Leitura {
                         if (!tipo.compare("J")) {
                             auto *pj = new PessoaJuridica(id, nome, telefone, endereco, cnpj);
                             con->add(pj);
+                        }
+                        if (!tipo.compare("L")) {
+                            auto *lj = new Loja(id, nome, telefone, endereco, cnpj);
+                            con->add(lj);
                         }
                     }
                 }

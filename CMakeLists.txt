@@ -18,4 +18,13 @@ add_executable(ProjetoPooCpp main.cpp
         ClassesAjudantes/NumPunctPTBR.cpp
         ClassesAjudantes/Tokenizer.cpp
         ClassesSistema/Controle.cpp
-        ClassesSistema/Controle.h)
+        ClassesSistema/Controle.h
+        ClassesSistema/Loja.cpp
+        ClassesSistema/Loja.h
+        ClassesLeitura/PlanilhaFestas.cpp
+        ClassesLeitura/PlanilhaFestas.h
+        ClassesSistema/Festa.cpp
+        ClassesSistema/Festa.h
+        ClassesSistema/Parcela.cpp
+        ClassesSistema/Parcela.h
+)
