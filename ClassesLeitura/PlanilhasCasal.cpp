@@ -30,13 +30,14 @@ namespace Leitura
                 auto t = Tokenizer(linha, ';');
                 while (t.hasNext())
                 {
-                    string  idLar = t.next(),
-                            idPessoa1 = t.next(),
+                    string idLar = t.next();
+                    if (idLar.length() < 3) {
+                        break;
+                    }
+                    string  idPessoa1 = t.next(),
                             idPessoa2 = t.next(),
                             rua = t.next();
-                    string save = t.next();
-                    cout << save;
-                    int numero = stoi(save);
+                    int numero = stoi(t.next());
                     string complemento = t.next();
                     
                     PessoaFisica    *p1 = con->getPessoaFisica(idPessoa1),
