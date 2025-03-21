@@ -17,6 +17,7 @@ int main() {
     auto* con = new Controle();
     PlanilhaPessoas::lePlanilhaPessoas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
     PlanilhasCasal::lePlanilhaLares("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
+    PlanilhasCasal::lePlanilhaCasamentos("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
     PlanilhaFestas::lePlanilhaFestas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
     PlanilhaTarefas::lePlanilhaTarefas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
     PlanilhaCompras::lePlanilhaCompras("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
@@ -55,6 +56,12 @@ int main() {
     {
         const auto item = iter.second; // pointer to Node
         item->imprimeCompras();
+    }
+
+    for (auto & iter : con->casais1())
+    {
+        const auto item = iter.second; // pointer to Node
+        item->imprimeCasal();
     }
      /*
      for (auto item: con->pessoas_juridicas()) {

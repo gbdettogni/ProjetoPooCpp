@@ -31,7 +31,7 @@ namespace Leitura
                 while (t.hasNext())
                 {
                     string idLar = t.next();
-                    if (idLar.length() < 3) {
+                    if (idLar.length() <3) {
                         break;
                     }
                     string  idPessoa1 = t.next(),

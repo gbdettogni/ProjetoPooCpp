@@ -28,6 +28,9 @@ public:
     void setLar(Lar *l);
     void setCasamento(Casamento *c);
     ~Casal() = default;
+
+    void imprimeCasal();
+
     static void existo();
 };
 

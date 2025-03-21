@@ -59,7 +59,11 @@ public:
         return compras;
     }
 
-    void add(string id, PessoaFisica * pf);
+     [[nodiscard]] unordered_map<string, Casal *> casais1() const {
+         return casais;
+     }
+
+     void add(string id, PessoaFisica * pf);
     void add(string id, Casal *c);
     void add(string id, Casamento *c);
     void add(string id, Lar *l);
