@@ -35,7 +35,8 @@ namespace Leitura {
 
                     auto p = new Sistema::Parcela(numParcelas, valorPrestador, data);
                     auto *imbecil = new Sistema::PessoaFisica("a", "a", "a", "a", data, "a", 2.5, 2.5, 2.5);
-                    con->add(new Sistema::Tarefa(idTarefa, valorPrestador, data, prazo,*imbecil, *p));
+                    auto *tarefa = new Sistema::Tarefa(idTarefa, valorPrestador, data, prazo,*imbecil, *p);
+                    con->add(idTarefa, tarefa);
                 }
             }
         }

@@ -43,19 +43,19 @@ namespace Leitura {
                             salario = parseDouble(t.next(), LOCALE_PT_BR);
                             gastos = parseDouble(t.next(), LOCALE_PT_BR);
 
-                        PessoaFisica *pf = new PessoaFisica(id, nome, telefone, endereco, dataNascimento, cpf, poupanca,
+                        auto *pf = new PessoaFisica(id, nome, telefone, endereco, dataNascimento, cpf, poupanca,
                                                       salario, gastos);
 
-                        Controle::add(id, pf);
+                        con->add(id, pf);
                     }else{       //dados adicionais PessoaFísica
                         string cnpj = t.next();
                         if (!tipo.compare("J")) {
                             auto *pj = new PessoaJuridica(id, nome, telefone, endereco, cnpj);
-                            Controle::add(id, pj);
+                            con->add(id, pj);
                         }
                         if (!tipo.compare("L")) {
                             auto *lj = new Loja(id, nome, telefone, endereco, cnpj);
-                            Controle::add(id, lj);
+                            con->add(id, lj);
                         }
                     }
                 }

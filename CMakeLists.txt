@@ -35,4 +35,9 @@ add_executable(ProjetoPooCpp main.cpp
         ClassesLeitura/PlanilhaTarefas.h
         ClassesLeitura/PlanilhaCompras.cpp
         ClassesLeitura/PlanilhaCompras.h
+        ClassesLeitura/PlanilhasCasal.cpp
+        ClassesSistema/Casal.cpp
+        ClassesSistema/Casal.hpp
+        ClassesSistema/Lar.hpp
+        ClassesSistema/Lar.cpp
 )

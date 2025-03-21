@@ -12,7 +12,7 @@ namespace Leitura {
 
 class PlanilhaTarefas {
 public:
-    static void lePlanilhaTarefas(const std::string &pasta, Sistema::Controle*);
+    static void lePlanilhaTarefas(const std::string &pasta, Sistema::Controle* con);
 
 };
 

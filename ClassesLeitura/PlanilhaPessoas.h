@@ -17,7 +17,7 @@ namespace Leitura {
 
 class PlanilhaPessoas {
 public:
-    static void lePlanilhaPessoas(const string &pasta, Sistema::Controle*);
+    static void lePlanilhaPessoas(const string &pasta, Sistema::Controle* con);
 };
 
 } // Leitura

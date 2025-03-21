@@ -36,7 +36,7 @@ namespace Leitura {
 
                     auto p = new Sistema::Parcela(numParcelas, preco, cpp_util::parseDate("16/10/2004", cpp_util::DATE_FORMAT_PT_BR_SHORT));
                     auto *imbecil = new Sistema::Loja("a", "a", "a", "a", "a");
-                    con->add(new Sistema::Compra(nome, quantidade, preco, *imbecil, *p));
+                    con->add(idCompra, new Sistema::Compra(nome, quantidade, preco, *imbecil, *p));
                 }
             }
         }
