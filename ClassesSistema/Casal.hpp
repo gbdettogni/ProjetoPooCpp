@@ -4,14 +4,16 @@
 
 using namespace std;
 #include "PessoaFisica.h"
+#include "Lar.hpp"
+#include "Casamento.hpp"
 
 namespace Sistema
 {
 class Casal {
 private:
     PessoaFisica *pessoa1, *pessoa2;    
-    //Casamento casamento;
-    //Lar lar;
+    Casamento *casamento;
+    Lar *lar;
     //list<Parcela> parcelasTotais;
 
     double  poupancaConjunta,
@@ -22,7 +24,9 @@ private:
     int casamentosConjuntos;
 
 public:
-    Casal(PessoaFisica &p1, PessoaFisica &p2);
+    Casal(PessoaFisica *p1, PessoaFisica *p2);
+    void setLar(Lar *l);
+    void setCasamento(Casamento *c);
     ~Casal() = default;
     static void existo();
 };
