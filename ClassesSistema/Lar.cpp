@@ -7,4 +7,14 @@ namespace Sistema
         this->complemento = complemento;
         this->numero = numero;
     }
+
+    void Lar::addTarefa(Tarefa *t) {
+        this->tarefas.push_back(t);
+    }
+
+    void Lar::imprimeLar() {
+        for (Tarefa *t : tarefas) {
+            t->imprimeTarefa();
+        }
+    }
 }

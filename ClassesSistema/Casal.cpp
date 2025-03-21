@@ -6,6 +6,8 @@ namespace Sistema{
         printf("Casal, formado pelos seguintes suheitos:\n");
         pessoa1->imprimeSujeito();
         pessoa2->imprimeSujeito();
+        lar->imprimeLar();
+        casamento->imprimeCasamento();
     }
 
     void Casal::existo(){

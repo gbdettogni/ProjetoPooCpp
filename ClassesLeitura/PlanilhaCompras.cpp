@@ -35,8 +35,14 @@ namespace Leitura {
                     int numParcelas = stoi(t.next());
 
                     auto p = new Sistema::Parcela(numParcelas, preco, cpp_util::parseDate("16/10/2004", cpp_util::DATE_FORMAT_PT_BR_SHORT));
-                    auto *imbecil = new Sistema::Loja("a", "a", "a", "a", "a");
-                    con->add(idCompra, new Sistema::Compra(nome, quantidade, preco, *imbecil, *p));
+                    auto *loja = con->getLoja(idLoja);
+                    auto* comp = new Sistema::Compra(nome, quantidade, preco, *loja, *p);
+
+
+
+                    con->getTarefa(idTarefa)->addCompra(comp);
+
+                    con->add(idCompra, comp);
                 }
             }
         }

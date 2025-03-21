@@ -83,6 +83,7 @@ public:
      Tarefa* getTarefa(string id);
      Compra* getCompra(string id);
 
+     void imprimeCasais();
 };
 
 } // Sistema

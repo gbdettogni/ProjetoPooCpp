@@ -40,4 +40,5 @@ add_executable(ProjetoPooCpp main.cpp
         ClassesSistema/Casal.hpp
         ClassesSistema/Lar.hpp
         ClassesSistema/Lar.cpp
+        ClassesSistema/Casamento.cpp
 )

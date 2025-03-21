@@ -18,7 +18,7 @@
 
 using namespace Sistema;
 namespace Leitura {
-    void PlanilhaFestas::lePlanilhaFestas(const string &pasta, Sistema::Controle *con) {
+    void PlanilhaFestas::lePlanilhaFestas(const string &pasta, Controle *con) {
         fstream arq;
         arq.open(pasta + "festas.csv", std::ios::in);
         string linha;
@@ -37,14 +37,17 @@ namespace Leitura {
                     int numParcelas = stoi(t.next());
                     int numConvidados = stoi(t.next());
 
-                    Sistema::Parcela* p = new Sistema::Parcela(numParcelas, preco, dataFesta);
+                    auto p = new Parcela(numParcelas, preco, dataFesta);
 
                     list<string> convidados;
 
                     while (t.hasNext()) {
                         convidados.push_back(t.next());
                     }
-                    Festa *f = new Festa(local, preco, dataFesta, hora, convidados, *p);
+
+                    auto f = new Festa(local, preco, dataFesta, hora, convidados, *p);
+
+                    con->getCasamento(idCasamento)->set_festa(f);
                     con->add(idFesta, f);
                 }
             }

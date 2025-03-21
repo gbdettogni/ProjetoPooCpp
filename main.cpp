@@ -22,47 +22,49 @@ int main() {
     PlanilhaTarefas::lePlanilhaTarefas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
     PlanilhaCompras::lePlanilhaCompras("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
 
-     for (auto & iter : con->pessoas_fisicas())
-     {
-         const auto item = iter.second; // pointer to Node
-         item->imprimeSujeito();
-     }
+    //  for (auto & iter : con->pessoas_fisicas())
+    //  {
+    //      const auto item = iter.second; // pointer to Node
+    //      item->imprimeSujeito();
+    //  }
+    //
+    // for (auto & iter : con->pessoas_juridicas())
+    // {
+    //     const auto item = iter.second; // pointer to Node
+    //     item->imprimeSujeito();
+    // }
+    //
+    // for (auto & iter : con->lojas1())
+    // {
+    //     const auto item = iter.second; // pointer to Node
+    //     item->imprimeSujeito();
+    // }
+    //
+    // for (auto & iter : con->festas1())
+    // {
+    //     const auto item = iter.second; // pointer to Node
+    //     item->imprimeFesta();
+    // }
+    //
+    // for (auto & iter : con->tarefas1())
+    // {
+    //     const auto item = iter.second; // pointer to Node
+    //     item->imprimeTarefa();
+    // }
+    //
+    // for (auto & iter : con->compras1())
+    // {
+    //     const auto item = iter.second; // pointer to Node
+    //     item->imprimeCompras();
+    // }
+    //
+    // for (auto & iter : con->casais1())
+    // {
+    //     const auto item = iter.second; // pointer to Node
+    //     item->imprimeCasal();
+    // }
 
-    for (auto & iter : con->pessoas_juridicas())
-    {
-        const auto item = iter.second; // pointer to Node
-        item->imprimeSujeito();
-    }
-
-    for (auto & iter : con->lojas1())
-    {
-        const auto item = iter.second; // pointer to Node
-        item->imprimeSujeito();
-    }
-
-    for (auto & iter : con->festas1())
-    {
-        const auto item = iter.second; // pointer to Node
-        item->imprimeFesta();
-    }
-
-    for (auto & iter : con->tarefas1())
-    {
-        const auto item = iter.second; // pointer to Node
-        item->imprimeTarefa();
-    }
-
-    for (auto & iter : con->compras1())
-    {
-        const auto item = iter.second; // pointer to Node
-        item->imprimeCompras();
-    }
-
-    for (auto & iter : con->casais1())
-    {
-        const auto item = iter.second; // pointer to Node
-        item->imprimeCasal();
-    }
+    con->imprimeCasais();
      /*
      for (auto item: con->pessoas_juridicas()) {
          item->imprimeSujeito();

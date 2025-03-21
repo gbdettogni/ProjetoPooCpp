@@ -34,8 +34,20 @@ namespace Leitura {
                     int numParcelas = stoi(t.next());
 
                     auto p = new Sistema::Parcela(numParcelas, valorPrestador, data);
-                    auto *imbecil = new Sistema::PessoaFisica("a", "a", "a", "a", data, "a", 2.5, 2.5, 2.5);
-                    auto *tarefa = new Sistema::Tarefa(idTarefa, valorPrestador, data, prazo,*imbecil, *p);
+
+                    Sistema::Pessoa* send;
+
+                    if (con->getPessoaFisica(idPrestador) != nullptr) {
+                        send = con->getPessoaFisica(idPrestador);;
+                    }else if (con->getPessoaJuridica(idPrestador) != nullptr) {
+                        send = con->getPessoaJuridica(idPrestador);
+                    }else if (con->getLoja(idPrestador) != nullptr) {
+                        send = con->getLoja(idPrestador);
+                    }
+
+                    auto *tarefa = new Sistema::Tarefa(idTarefa, valorPrestador, data, prazo,*send, *p);
+
+                    con->getLar(idLar)->addTarefa(tarefa);
                     con->add(idTarefa, tarefa);
                 }
             }

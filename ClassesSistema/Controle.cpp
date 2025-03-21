@@ -101,4 +101,12 @@ namespace Sistema {
         else return nullptr;
         
     }
+
+    void Controle::imprimeCasais() {
+        for (auto & iter : casais1())
+        {
+            const auto item = iter.second; // pointer to Node
+            item->imprimeCasal();
+        }
+    }
 } // Sistema

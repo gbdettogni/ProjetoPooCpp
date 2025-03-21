@@ -7,5 +7,12 @@
 namespace Sistema {
     void Tarefa::imprimeTarefa() const {
         printf("Tarefa: %f %d\n", preco, prazo);
+        for (Compra* c : compras) {
+            c->imprimeCompras();
+        }
+    }
+
+    void Tarefa::addCompra(Compra* cp) {
+        compras.push_back(cp);
     }
 } // Sistema
