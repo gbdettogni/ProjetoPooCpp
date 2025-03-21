@@ -9,7 +9,7 @@ namespace Sistema
 {
 class Casal {
 private:
-    PessoaFisica pessoa1, pessoa2;    
+    PessoaFisica *pessoa1, *pessoa2;    
     //Casamento casamento;
     //Lar lar;
     //list<Parcela> parcelasTotais;
@@ -22,7 +22,7 @@ private:
     int casamentosConjuntos;
 
 public:
-    Casal(/* args */);
+    Casal(PessoaFisica &p1, PessoaFisica &p2);
     ~Casal() = default;
     static void existo();
 };

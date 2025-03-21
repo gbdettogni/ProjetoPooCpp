@@ -6,6 +6,7 @@
 #include "../ClassesAjudantes/DateUtils.hpp"
 #include "../ClassesAjudantes/NumberUtils.hpp"
 #include "../ClassesSistema/PessoaFisica.h"
+#include "../ClassesSistema/Casal.hpp"
 
 #include <fstream>
 #include <iostream>
@@ -32,6 +33,15 @@ namespace Leitura
                             idPessoa2 = t.next(), rua = t.next();
                     int numero = stoi(t.next());
                     string complemento = t.next();
+                    
+                    Casal* c = Controle::getCasalById(idPessoa1,idPessoa2);
+                    if (c == nullptr)
+                    {
+                        //
+                    }else{
+                        //
+                    }
+                    
                 }
                 
             }

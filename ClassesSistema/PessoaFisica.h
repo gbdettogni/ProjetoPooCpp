@@ -9,20 +9,21 @@
 
 #include "Pessoa.h"
 
+using namespace std;
 namespace Sistema {
 
 class PessoaFisica: public Pessoa {
 private:
     time_t dataNascimento;
-    std::string cpf;
+    string cpf;
     double poupanca;
     double salario;
     double gastos;
 
 public:
-    PessoaFisica(const std::string &id, const std::string &nome, const std::string &telefone,
-        const std::string &endereco, time_t data_nascimento,
-        const std::string &cpf, double poupanca, double salario, double gastos)
+    PessoaFisica(const string &id, const string &nome, const string &telefone,
+        const string &endereco, time_t data_nascimento,
+        const string &cpf, double poupanca, double salario, double gastos)
         : Pessoa(id, nome, telefone, endereco),
           dataNascimento(data_nascimento),
           cpf(cpf),

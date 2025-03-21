@@ -8,18 +8,19 @@
 #include <ostream>
 #include <string>
 
+using namespace std;
 namespace Sistema {
 
 class Pessoa {
 protected:
-    std::string id;
-    std::string nome;
-    std::string telefone;
-    std::string endereco;
+    string id;
+    string nome;
+    string telefone;
+    string endereco;
     bool prestador;
     double valorRecebido;
 public:
-    Pessoa(const std::string &id, const std::string &nome, const std::string &telefone, const std::string &endereco
+    Pessoa(const string &id, const string &nome, const string &telefone, const string &endereco
         )
         : id(id),
           nome(nome),
@@ -28,6 +29,8 @@ public:
 
           {
     }
+
+    string getNome();
 
     ~Pessoa() = default;
 

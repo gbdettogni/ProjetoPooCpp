@@ -3,10 +3,15 @@
 //
 
 #include "Pessoa.h"
+using namespace std;
 
 namespace Sistema {
     void Pessoa::func(){
         std::cout << "Pessoa" << std::endl;
+    }
+
+    string Pessoa::getNome(){
+        return this->nome;
     }
 
 } // Sistema

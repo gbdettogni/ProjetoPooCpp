@@ -22,7 +22,7 @@ private:
     list<PessoaJuridica*> pessoasJuridicas;
     list<PessoaJuridica*> lojas;
     list<Festa*> festas;
-    unordered_map<string, Casal*> casais;
+    static unordered_map<string, Casal*> casais;
 
 public:
     Controle() = default;
@@ -50,7 +50,7 @@ public:
     void add(Loja *lj);
     void add(Festa *fe);
 
-    Casal* getCasalById(string &id1, string &id2);
+    static Casal* getCasalById(string &id1, string &id2);
 };
 
 } // Sistema
