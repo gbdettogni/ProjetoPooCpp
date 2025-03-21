@@ -22,4 +22,15 @@ namespace Sistema {
     void Controle::add(Festa *fe) {
         festas.push_back(fe);
     }
+
+    Casal* Controle::getCasalById(string &id1, string &id2){ //tenta achar o casal no Map por cada um dos ids das pessoas
+        if (casais.count(id1) > 0)                          //vai que a entrada do lar/casamento tem os mesmos ids porém invertidos em ordem
+        {
+            return casais.at(id1);
+        }else if (casais.count(id2)>0)
+        {
+            return casais.at(id2);
+        }
+        else return nullptr;
+    }
 } // Sistema

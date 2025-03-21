@@ -5,38 +5,43 @@
 #ifndef CONTROLE_H
 #define CONTROLE_H
 #include <list>
+#include <unordered_map>
 
 #include "Festa.h"
 #include "Loja.h"
 #include "PessoaFisica.h"
 #include "PessoaJuridica.h"
+#include "Casal.hpp"
 
+using namespace std;
 namespace Sistema {
 
 class Controle {
-    std::list<PessoaFisica*> pessoasFisicas;
-    std::list<PessoaJuridica*> pessoasJuridicas;
-    std::list<PessoaJuridica*> lojas;
-    std::list<Festa*> festas;
+private:
+    list<PessoaFisica*> pessoasFisicas;
+    list<PessoaJuridica*> pessoasJuridicas;
+    list<PessoaJuridica*> lojas;
+    list<Festa*> festas;
+    unordered_map<string, Casal*> casais;
 
 public:
     Controle() = default;
 
     ~Controle() = default;
 
-    [[nodiscard]] std::list<PessoaFisica *> pessoas_fisicas() const {
+    [[nodiscard]] list<PessoaFisica *> pessoas_fisicas() const {
         return pessoasFisicas;
     }
 
-    [[nodiscard]] std::list<PessoaJuridica *> pessoas_juridicas() const {
+    [[nodiscard]] list<PessoaJuridica *> pessoas_juridicas() const {
         return pessoasJuridicas;
     }
 
-    [[nodiscard]] std::list<PessoaJuridica *> lojas1() const {
+    [[nodiscard]] list<PessoaJuridica *> lojas1() const {
         return lojas;
     }
 
-    [[nodiscard]] std::list<Festa *> festas1() const {
+    [[nodiscard]] list<Festa *> festas1() const {
         return festas;
     }
 
@@ -44,6 +49,8 @@ public:
     void add(PessoaJuridica * pj);
     void add(Loja *lj);
     void add(Festa *fe);
+
+    Casal* getCasalById(string &id1, string &id2);
 };
 
 } // Sistema
