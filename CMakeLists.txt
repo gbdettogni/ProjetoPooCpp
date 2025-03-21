@@ -27,4 +27,12 @@ add_executable(ProjetoPooCpp main.cpp
         ClassesSistema/Festa.h
         ClassesSistema/Parcela.cpp
         ClassesSistema/Parcela.h
+        ClassesSistema/Tarefa.cpp
+        ClassesSistema/Tarefa.h
+        ClassesSistema/Compra.cpp
+        ClassesSistema/Compra.h
+        ClassesLeitura/PlanilhaTarefas.cpp
+        ClassesLeitura/PlanilhaTarefas.h
+        ClassesLeitura/PlanilhaCompras.cpp
+        ClassesLeitura/PlanilhaCompras.h
 )

@@ -33,4 +33,12 @@ namespace Sistema {
         }
         else return nullptr;
     }
+
+    void Controle::add(Tarefa *tf) {
+        tarefas.push_back(tf);
+    }
+
+    void Controle::add(Compra *cp) {
+        compras.push_back(cp);
+    }
 } // Sistema

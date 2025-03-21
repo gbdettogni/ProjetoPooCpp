@@ -5,7 +5,6 @@
 #ifndef CONTROLE_H
 #define CONTROLE_H
 #include <list>
-#include <unordered_map>
 
 #include "Festa.h"
 #include "Loja.h"
@@ -13,7 +12,6 @@
 #include "PessoaJuridica.h"
 #include "Casal.hpp"
 
-using namespace std;
 namespace Sistema {
 
 class Controle {
@@ -23,6 +21,8 @@ private:
     list<PessoaJuridica*> lojas;
     list<Festa*> festas;
     static unordered_map<string, Casal*> casais;
+    list<Tarefa*> tarefas;
+    list<Compra*> compras;
 
 public:
     Controle() = default;
@@ -45,12 +45,23 @@ public:
         return festas;
     }
 
+    [[nodiscard]] std::list<Tarefa *> tarefas1() const {
+        return tarefas;
+    }
+
+    [[nodiscard]] std::list<Compra *> compras1() const {
+        return compras;
+    }
+
     void add(PessoaFisica * pf);
     void add(PessoaJuridica * pj);
     void add(Loja *lj);
     void add(Festa *fe);
 
     static Casal* getCasalById(string &id1, string &id2);
+    void add(Tarefa * pf);
+    void add(Compra * pf);
+
 };
 
 } // Sistema
