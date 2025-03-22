@@ -17,7 +17,7 @@ char NumPunctPTBR::do_decimal_point() const {
 /* This locale uses grouping (at every 3 digits). */
 // Se quiserem remover a pontuação de milhares, deixe apenas '\0'
 string NumPunctPTBR::do_grouping() const {
-	return "\03";
+	return "\0";
 }
 
 /* In pt-BR, grouping of thousands are separated with a '.': e.g., 1.000 for a thousand. */
