@@ -45,7 +45,7 @@ namespace Leitura {
                         send = con->getLoja(idPrestador);
                     }
 
-                    auto *tarefa = new Sistema::Tarefa(idTarefa, valorPrestador, data, prazo,*send, *p);
+                    auto *tarefa = new Sistema::Tarefa(idTarefa, valorPrestador, data, prazo,send, p);
 
                     con->getLar(idLar)->addTarefa(tarefa);
                     con->add(idTarefa, tarefa);

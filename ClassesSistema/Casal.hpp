@@ -27,7 +27,10 @@ public:
     Casal(PessoaFisica *p1, PessoaFisica *p2);
     void setLar(Lar *l);
     void setCasamento(Casamento *c);
-    ~Casal() = default;
+    ~Casal() {
+        delete casamento;
+        delete lar;
+    };
 
     void imprimeCasal();
 

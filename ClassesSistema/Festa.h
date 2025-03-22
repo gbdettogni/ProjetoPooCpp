@@ -19,11 +19,11 @@ private:
      time_t data;
      string horario;
      list<string> listaConvidados;
-     Parcela parcela;
+     Parcela* parcela;
 
 public:
      Festa(const string &local, double preco_pago, time_t data, const string &horario,
-          const list<string> &lista_convidados, const Parcela &parcela)
+          const list<string> &lista_convidados, Parcela *parcela)
           : local(local),
             precoPago(preco_pago),
             data(data),
@@ -32,7 +32,9 @@ public:
             parcela(parcela) {
      }
 
-     ~Festa() = default;
+     ~Festa() {
+          delete parcela;
+     };
 
      void imprimeFesta();
 };

@@ -21,6 +21,12 @@ namespace Sistema{
         void addTarefa(Tarefa* t);
 
         void imprimeLar();
+
+        ~Lar() {
+            for (auto tarefa : tarefas) {
+                delete tarefa;
+            }
+        };
     };
     
     

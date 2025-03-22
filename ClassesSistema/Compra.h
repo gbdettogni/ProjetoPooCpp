@@ -18,17 +18,21 @@ private:
     string nomeProduto;
     int quantidade;
     double precoUnidade;
-    Loja loja;
-    Parcela parcela;
+    Loja* loja;
+    Parcela* parcela;
 
 public:
-    Compra(const string &nome_produto, int quantidade, double preco_unidade, const Loja &loja, const Parcela &parcela)
+    Compra(const string &nome_produto, int quantidade, double preco_unidade, Loja *loja, Parcela *parcela)
         : nomeProduto(nome_produto),
           quantidade(quantidade),
           precoUnidade(preco_unidade),
           loja(loja),
           parcela(parcela) {
     }
+
+    ~Compra() {
+        delete parcela;
+    };
 
     void imprimeCompras() const;
 };

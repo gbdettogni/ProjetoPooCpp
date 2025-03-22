@@ -22,6 +22,10 @@ namespace Sistema{
             }
 
             void imprimeCasamento() const;
+
+            ~Casamento() {
+                delete festa;
+            };
     };
 }
 

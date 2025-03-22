@@ -45,7 +45,7 @@ namespace Leitura {
                         convidados.push_back(t.next());
                     }
 
-                    auto f = new Festa(local, preco, dataFesta, hora, convidados, *p);
+                    auto f = new Festa(local, preco, dataFesta, hora, convidados, p);
 
                     con->getCasamento(idCasamento)->set_festa(f);
                     con->add(idFesta, f);

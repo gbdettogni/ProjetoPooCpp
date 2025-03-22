@@ -18,9 +18,12 @@ private:
 public:
     Parcela(int num_inicial, double valor, time_t data_inicio)
         : numInicial(num_inicial),
+          numAtual(num_inicial),
           valor(valor),
           dataInicio(data_inicio) {
     }
+
+    ~Parcela() = default;
 };
 
 } // Sistema

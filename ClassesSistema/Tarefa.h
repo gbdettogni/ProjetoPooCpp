@@ -21,12 +21,11 @@ private:
      double preco;
      time_t data;
      int prazo;
-     Pessoa prestador;
+     Pessoa* prestador;
      list<Compra*> compras;
-     Parcela parcela;
+     Parcela* parcela;
 public:
-     Tarefa(const string &id, double preco, time_t data, int prazo, const Pessoa &prestador,
-          const Parcela &parcela)
+     Tarefa(const string &id, double preco, time_t data, int prazo, Pessoa *prestador, Parcela *parcela)
           : id(id),
             preco(preco),
             data(data),
@@ -38,6 +37,13 @@ public:
      void imprimeTarefa() const;
 
      void addCompra(Compra *cp);
+
+     ~Tarefa() {
+          delete parcela;
+          for (Compra *cp : compras) {
+               delete cp;
+          }
+     };
 };
 
 } // Sistema

@@ -33,7 +33,24 @@ private:
 public:
     Controle() = default;
 
-    ~Controle() = default;
+    ~Controle() {
+        for (const auto & iter : casais1())
+        {
+            delete iter.second;
+        }
+        for (auto & iter : pessoasFisicas)
+        {
+            delete iter.second;
+        }
+        for (auto & iter : pessoasJuridicas)
+        {
+            delete iter.second;
+        }
+        for (auto & iter : lojas)
+        {
+            delete iter.second;
+        }
+    };
 
      [[nodiscard]] unordered_map<string, PessoaFisica *> pessoas_fisicas() const {
          return pessoasFisicas;
@@ -84,6 +101,8 @@ public:
      Compra* getCompra(string id);
 
      void imprimeCasais();
+
+
 };
 
 } // Sistema
