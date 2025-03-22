@@ -13,14 +13,14 @@
 using namespace Sistema;
 using namespace Leitura;
 
-int main() {
+int main(int argc, char *argv[]) {
     auto* con = new Controle();
-    PlanilhaPessoas::lePlanilhaPessoas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
-    PlanilhasCasal::lePlanilhaLares("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
-    PlanilhasCasal::lePlanilhaCasamentos("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
-    PlanilhaFestas::lePlanilhaFestas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
-    PlanilhaTarefas::lePlanilhaTarefas("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
-    PlanilhaCompras::lePlanilhaCompras("/home/betelgeuse/CLionProjects/ProjetoPooCpp/casos/01/", con);
+    PlanilhaPessoas::lePlanilhaPessoas(argv[1], con);
+    PlanilhasCasal::lePlanilhaLares(argv[1], con);
+    PlanilhasCasal::lePlanilhaCasamentos(argv[1], con);
+    PlanilhaFestas::lePlanilhaFestas(argv[1], con);
+    PlanilhaTarefas::lePlanilhaTarefas(argv[1], con);
+    PlanilhaCompras::lePlanilhaCompras(argv[1], con);
 
     //  for (auto & iter : con->pessoas_fisicas())
     //  {

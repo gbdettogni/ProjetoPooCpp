@@ -13,6 +13,7 @@ namespace Sistema
     }
 
     void Lar::imprimeLar() {
+        std::cout << "Possui lar" << std::endl;
         for (Tarefa *t : tarefas) {
             t->imprimeTarefa();
         }

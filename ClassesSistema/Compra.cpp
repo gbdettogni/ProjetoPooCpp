@@ -6,6 +6,6 @@
 
 namespace Sistema {
     void Compra::imprimeCompras() const {
-        printf("nomee: %s\n", nomeProduto.c_str());
+        printf("Compra: %s\n", nomeProduto.c_str());
     }
 } // Sistema

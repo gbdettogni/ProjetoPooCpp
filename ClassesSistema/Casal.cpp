@@ -3,7 +3,7 @@ using namespace std;
 
 namespace Sistema{
     void Casal::imprimeCasal() {
-        printf("Casal, formado pelos seguintes suheitos:\n");
+        printf("Casal, formado pelos seguintes sujeitos:\n");
         pessoa1->imprimeSujeito();
         pessoa2->imprimeSujeito();
         lar->imprimeLar();
@@ -18,6 +18,8 @@ namespace Sistema{
         string n1 = (*p1).getNome(), n2 = (*p2).getNome();
         pessoa1 = p1;
         pessoa2 = p2;
+        casamento = nullptr;
+        lar = nullptr;
     }
 
     void Casal::setLar(Lar* l){
