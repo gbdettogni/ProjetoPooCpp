@@ -32,6 +32,10 @@ public:
             parcela(parcela) {
      }
 
+     double getPrecoPago();
+
+     list<string> getListaConvidados();
+
      ~Festa() {
           delete parcela;
      };

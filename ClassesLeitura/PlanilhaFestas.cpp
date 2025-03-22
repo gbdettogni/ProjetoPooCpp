@@ -6,6 +6,7 @@
 #include "../ClassesAjudantes/Tokenizer.hpp"
 #include "../ClassesAjudantes/DateUtils.hpp"
 #include "../ClassesAjudantes/NumberUtils.hpp"
+#include "../ClassesAjudantes/StringUtils.hpp"
 
 
 #include <fstream>
@@ -42,12 +43,13 @@ namespace Leitura {
                     list<string> convidados;
 
                     while (t.hasNext()) {
-                        convidados.push_back(t.next());
+                        string conv = t.next();
+                        convidados.push_back(cpp_util::trim(conv));
                     }
 
                     auto f = new Festa(local, preco, dataFesta, hora, convidados, p);
 
-                    con->getCasamento(idCasamento)->set_festa(f);
+                    con->getCasamento(idCasamento)->setFesta(f);
                     con->add(idFesta, f);
                 }
             }

@@ -17,4 +17,12 @@ namespace Sistema {
         }
         
     }
+
+    double Festa::getPrecoPago(){
+        return precoPago;
+    }
+
+    list<string> Festa::getListaConvidados(){
+        return listaConvidados;
+    }
 } // Sistema

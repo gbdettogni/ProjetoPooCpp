@@ -22,6 +22,8 @@ namespace Sistema{
 
         void imprimeLar();
 
+        double getPrecoTotalTarefas();
+
         ~Lar() {
             for (auto tarefa : tarefas) {
                 delete tarefa;

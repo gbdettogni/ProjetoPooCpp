@@ -17,11 +17,13 @@ namespace Sistema{
             Festa* festa;
 
         public:
-            Casamento(string local, time_t data, string hora) : local(local), data(data), hora(hora){}
+            Casamento(string local, time_t data, string hora);
 
-            void set_festa(Festa *festa) {
+            void setFesta(Festa *festa) {
                 this->festa = festa;
             }
+            
+            Festa* getFesta();
 
             void imprimeCasamento() const;
 

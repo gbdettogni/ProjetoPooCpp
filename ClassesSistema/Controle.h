@@ -76,6 +76,10 @@ public:
         return compras;
     }
 
+    [[nodiscard]] unordered_map<string, Casamento *> casamentos1() const {
+        return casamentos;
+    }
+
      [[nodiscard]] unordered_map<string, Casal *> casais1() const {
          return casais;
      }

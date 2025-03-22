@@ -12,6 +12,14 @@ namespace Sistema
         this->tarefas.push_back(t);
     }
 
+    double Lar::getPrecoTotalTarefas(){
+        double precoTarefas = 0;
+        for(Tarefa *t : tarefas){
+            precoTarefas += t->getPrecoTarefa();
+        }
+        return precoTarefas;
+    }
+
     void Lar::imprimeLar() {
         std::cout << "Possui lar" << std::endl;
         for (Tarefa *t : tarefas) {

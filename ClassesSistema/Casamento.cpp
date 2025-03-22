@@ -5,6 +5,17 @@
 #include "../ClassesAjudantes/DateUtils.hpp"
 
 namespace Sistema{
+    Casamento::Casamento(string local, time_t data, string hora){
+        this->local = local;
+        this->data = data;
+        this->hora = hora;
+        festa = nullptr;
+    }
+
+    Festa* Casamento::getFesta(){
+        return festa;
+    }
+
     void Casamento::imprimeCasamento() const {
         printf("Tem casamento\n");
         printf("Local: %s\n", local.c_str());

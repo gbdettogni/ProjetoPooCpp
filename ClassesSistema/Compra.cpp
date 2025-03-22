@@ -8,4 +8,8 @@ namespace Sistema {
     void Compra::imprimeCompras() const {
         printf("Compra: %s\n", nomeProduto.c_str());
     }
+
+    double Compra::getPreco(){
+        return precoUnidade * quantidade;
+    }
 } // Sistema

@@ -15,4 +15,12 @@ namespace Sistema {
     void Tarefa::addCompra(Compra* cp) {
         compras.push_back(cp);
     }
+
+    double Tarefa::getPrecoTarefa(){
+        double precoTarefa = preco;
+        for(Compra *c : compras){
+            precoTarefa += c->getPreco();
+        }
+        return precoTarefa;
+    }
 } // Sistema

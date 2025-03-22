@@ -30,6 +30,8 @@ public:
           parcela(parcela) {
     }
 
+    double getPreco();
+
     ~Compra() {
         delete parcela;
     };

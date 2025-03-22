@@ -34,6 +34,8 @@ public:
             parcela(parcela) {
      }
 
+     double getPrecoTarefa();
+
      void imprimeTarefa() const;
 
      void addCompra(Compra *cp);
