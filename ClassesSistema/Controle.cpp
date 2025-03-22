@@ -24,7 +24,6 @@ namespace Sistema {
         string data = cpp_util::formatDate(inicioDosTempos, cpp_util::DATE_FORMAT_PT_BR_SHORT);
         bool ativo;
         while (true){
-            cout << data << endl;
             ativo = false;
             for (const auto & iter : casais1())
             {
@@ -57,10 +56,10 @@ namespace Sistema {
         }
         //cout << dia << endl;
         if (mes <= 9) {
-            novaData = std::format("{}/0{}/{}", dia, mes, ano);
+            novaData = format("{}/0{}/{}", dia, mes, ano);
         }
         else{
-            novaData = std::format("{}/{}/{}", dia, mes, ano);
+            novaData = format("{}/{}/{}", dia, mes, ano);
         }
         return novaData;
     }

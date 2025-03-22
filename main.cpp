@@ -43,7 +43,6 @@ int main(int argc, char *argv[]) {
         string cpf1;
         string cpf2;
         cin >> cpf1;
-        //gambiarra
         cpf1 = Tokenizer(cpf1, ',').next();
         cin >> cpf2;
 
@@ -52,7 +51,7 @@ int main(int argc, char *argv[]) {
         }
 
         auto* p = new cpp_utils::Pair(cpf1, cpf2);
-        cout << p->member1 << " & " << p->member2 << endl;
+        // cout << p->member1 << " & " << p->member2 << endl;
         cpfs.push_back(p);
     }
 
@@ -62,13 +61,16 @@ int main(int argc, char *argv[]) {
 
     RelatorioCasais::geraRelatorioCasais(argv[1], con);
     RelatorioFinanceiro::geraRelatorioFinanceiro(argv[1], con, cpfs);
+        for (cpp_utils::Pair* c : cpfs) {
+            delete c;
+        }
     }
     catch(Exc::Excecao &e)
     {
         cout << e << endl;
     }
     
-     
+
 
     delete con;
     return 0;

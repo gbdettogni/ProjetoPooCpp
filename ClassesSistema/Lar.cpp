@@ -29,7 +29,6 @@ namespace Sistema
 
     list<Parcela *> Lar::getParcelasTarefasCompras() {
         list<Parcela *> parcelas;
-        cout << tarefas.size() << endl;
         for (Tarefa *t : tarefas) {
             parcelas.splice(parcelas.end(), t->getParcelasTarefasCompras());
         }

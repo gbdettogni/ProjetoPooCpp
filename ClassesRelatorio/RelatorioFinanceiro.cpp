@@ -56,7 +56,7 @@ namespace Relatorio {
         }else {
             dia = (dias[mes - 1]);
         }
-        cout << dia << endl;
+        // cout << dia << endl;
         if (mes <= 9) {
             novaData = std::format("{}/0{}/{}", dia, mes, ano);
         }
