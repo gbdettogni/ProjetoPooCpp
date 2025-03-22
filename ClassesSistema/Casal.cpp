@@ -16,8 +16,14 @@ namespace Sistema{
 
     Casal::Casal(PessoaFisica *p1, PessoaFisica *p2){
         string n1 = (*p1).getNome(), n2 = (*p2).getNome();
-        pessoa1 = p1;
-        pessoa2 = p2;
+        if (n1.compare(n2) < 0){
+            pessoa1 = p1;
+            pessoa2 = p2;
+        }
+        else{
+            pessoa1 = p2;
+            pessoa2 = p1;
+        }
         casamento = nullptr;
         lar = nullptr;
     }

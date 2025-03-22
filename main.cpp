@@ -9,9 +9,11 @@
 #include "ClassesSistema/Pessoa.h"
 #include "ClassesSistema/PessoaFisica.h"
 #include "ClassesLeitura/PlanilhaCompras.h"
+#include "ClassesRelatorio/RelatorioCasais.hpp"
 
 using namespace Sistema;
 using namespace Leitura;
+using namespace Relatorio;
 
 int main(int argc, char *argv[]) {
     auto* con = new Controle();
@@ -65,6 +67,8 @@ int main(int argc, char *argv[]) {
     // }
 
     con->imprimeCasais();
+
+    RelatorioCasais::geraRelatorioCasais(argv[1], con);
      /*
      for (auto item: con->pessoas_juridicas()) {
          item->imprimeSujeito();
