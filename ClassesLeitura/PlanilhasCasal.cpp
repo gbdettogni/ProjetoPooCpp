@@ -44,11 +44,11 @@ namespace Leitura
                                     *p2 = con->getPessoaFisica(idPessoa2);
 
                     if(p1 != nullptr && p2 != nullptr){
-                        Casal* c = con->getCasal(idPessoa1,idPessoa2);
+                        Casal* c = con->getCasal(p1->getCpf(),p2->getCpf());
                         if (c == nullptr)
                         {
                             c = new Casal(p1,p2);
-                            con->add(idPessoa1, c);
+                            con->add(p1->getCpf(), c);
                         }
                         Lar *l = new Lar(rua,complemento,numero);
                         con->add(idLar, l);
@@ -84,11 +84,11 @@ namespace Leitura
                                     *p2 = con->getPessoaFisica(idPessoa2);
 
                     if(p1 != nullptr && p2 != nullptr){
-                        Casal* c = con->getCasal(idPessoa1,idPessoa2);
+                        Casal* c = con->getCasal(p1->getCpf(),p2->getCpf());
                         if (c == nullptr)
                         {
                             c = new Casal(p1,p2);
-                            con->add(idPessoa1, c);
+                            con->add(p1->getCpf(), c);
                         }
                         Casamento *casamento = new Casamento(local, data, hora);
                         con->add(idCasamento, casamento);

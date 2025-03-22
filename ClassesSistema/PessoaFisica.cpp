@@ -10,6 +10,6 @@ namespace Sistema {
     }
 
     void PessoaFisica::imprimeSujeito() {
-        printf("Nome: %s\nEndereço: %s\nTelefone: %s\nCPF: %s\nGasto Mensal: %f\n", nome.c_str(), endereco.c_str(), telefone.c_str(), cpf.c_str(), gastos);
+        printf("Nome: %s\nEndereço: %s\nTelefone: %s\nCPF: %s\nGasto Mensal: %f\nSalario: %f\nPoupanca: %f\n", nome.c_str(), endereco.c_str(), telefone.c_str(), cpf.c_str(), gastos, salario, poupanca);
     }
 } // Sistema

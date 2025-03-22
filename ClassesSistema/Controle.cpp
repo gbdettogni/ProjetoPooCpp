@@ -3,9 +3,68 @@
 //
 
 #include "Controle.h"
+
+#include <format>
+
 #include "Loja.h"
+#include "../ClassesAjudantes/DateUtils.hpp"
 
 namespace Sistema {
+    void Controle::somaParcelas() {
+        for (const auto & iter : casais1())
+        {
+            time_t saved = iter.second->somadorParcelas();
+            if (saved < inicioDosTempos) {
+                inicioDosTempos = saved;
+            }
+        }
+    }
+
+    void Controle::processaParcelas() {
+        string data = cpp_util::formatDate(inicioDosTempos, cpp_util::DATE_FORMAT_PT_BR_SHORT);
+        bool ativo;
+        while (true){
+            cout << data << endl;
+            ativo = false;
+            for (const auto & iter : casais1())
+            {
+                time_t dataAtual = cpp_util::parseDate(data, cpp_util::DATE_FORMAT_PT_BR_SHORT);
+                if (iter.second->processaParcelas(dataAtual)) {
+                    ativo = true;
+                }
+            }
+            if (!ativo) {
+                return;
+            }
+            data = gambiarra(data);
+        }
+    }
+
+    string Controle::gambiarra(string data) {
+        int dias[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        string novaData;
+        int dia, mes, ano;
+        mes = stoi(data.substr(3, 2)) + 1;
+        ano = stoi(data.substr(6, 4));
+        if (mes == 13) {
+            mes = 1;
+            ano++;
+        }
+        if (mes == 2 && ano % 4 == 0) {
+            dia = 29;
+        }else {
+            dia = (dias[mes - 1]);
+        }
+        //cout << dia << endl;
+        if (mes <= 9) {
+            novaData = std::format("{}/0{}/{}", dia, mes, ano);
+        }
+        else{
+            novaData = std::format("{}/{}/{}", dia, mes, ano);
+        }
+        return novaData;
+    }
+
     void Controle::add(string id, PessoaFisica *pf) {
         pessoasFisicas.insert(pair<string,PessoaFisica*>(id,pf));
     }
@@ -109,4 +168,6 @@ namespace Sistema {
             item->imprimeCasal();
         }
     }
+
+
 } // Sistema

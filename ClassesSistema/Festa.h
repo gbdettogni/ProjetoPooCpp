@@ -38,7 +38,9 @@ public:
 
      ~Festa() {
           delete parcela;
-     };
+     }
+
+     Parcela *getParcelasFesta();;
 
      void imprimeFesta();
 };

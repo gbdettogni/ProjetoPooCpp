@@ -29,7 +29,9 @@ namespace Sistema{
 
             ~Casamento() {
                 delete festa;
-            };
+            }
+
+            Parcela *getParcelasFesta();;
     };
 }
 

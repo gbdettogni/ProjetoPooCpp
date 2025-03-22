@@ -48,6 +48,7 @@ namespace Leitura {
                     auto *tarefa = new Sistema::Tarefa(idTarefa, valorPrestador, data, prazo,send, p);
 
                     con->getLar(idLar)->addTarefa(tarefa);
+                    cout << "oi\n";
                     con->add(idTarefa, tarefa);
                 }
             }

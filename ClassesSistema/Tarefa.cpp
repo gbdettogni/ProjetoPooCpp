@@ -23,4 +23,17 @@ namespace Sistema {
         }
         return precoTarefa;
     }
+
+    list<Parcela *> Tarefa::getParcelasTarefasCompras() {
+        list<Parcela *> parcelas;
+        parcelas.push_back(parcela);
+        for (Compra* c : compras) {
+            parcelas.push_back(c->getParcela());
+        }
+        return parcelas;
+    }
+
+    time_t Tarefa::getData() {
+        return parcela->getData();
+    }
 } // Sistema

@@ -41,4 +41,12 @@ add_executable(ProjetoPooCpp main.cpp
         ClassesSistema/Lar.hpp
         ClassesSistema/Lar.cpp
         ClassesSistema/Casamento.cpp
+        ClassesRelatorio/RelatorioCasais.cpp
+        ClassesRelatorio/RelatorioCasais.hpp
+        ClassesAjudantes/StringUtils.hpp
+        ClassesAjudantes/StringUtils.cpp
+        ClassesAjudantes/Pair.cpp
+        ClassesAjudantes/Pair.h
+        ClassesRelatorio/RelatorioFinanceiro.cpp
+        ClassesRelatorio/RelatorioFinanceiro.h
 )
