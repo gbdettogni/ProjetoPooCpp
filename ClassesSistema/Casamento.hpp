@@ -3,6 +3,8 @@
 
 #include <string>
 
+#include "Festa.h"
+
 using namespace std;
 namespace Sistema{
     class Festa;
