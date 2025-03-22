@@ -18,7 +18,6 @@ namespace Sistema{
 
     Casal::Casal(PessoaFisica *p1, PessoaFisica *p2){
         string n1 = p1->getNome(), n2 = p2->getNome();
-        std::cout << n1 + "/" + n2 << std::endl;
         if (n1.compare(n2) < 0){
             pessoa1 = p1;
             pessoa2 = p2;
@@ -59,7 +58,7 @@ namespace Sistema{
             if(f != nullptr) gastoTotal += f->getPrecoPago();
         }
         if(lar != nullptr) gastoTotal += lar->getPrecoTotalTarefas();
-        std::cout << "gasto total: " << gastoTotal << std::endl;
+        //std::cout << "gasto total: " << gastoTotal << std::endl;
     }
 
     void Casal::processaCasamentoConjunto(unordered_map<string, Festa*> festas){
@@ -79,7 +78,7 @@ namespace Sistema{
             }
                 
         }
-        std::cout << "casamentos conjuntos: " << casamentosConjuntos << std::endl;
+        //std::cout << "casamentos conjuntos: " << casamentosConjuntos << std::endl;
     }
 
     ostream& operator<<(ostream& stream, Casal* casal){

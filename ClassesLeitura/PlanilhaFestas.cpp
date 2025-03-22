@@ -16,6 +16,8 @@
 #include "../ClassesSistema/Controle.h"
 #include "../ClassesSistema/Festa.h"
 #include "../ClassesSistema/Parcela.h"
+#include "../ClassesException/Exception.hpp"
+
 
 using namespace Sistema;
 namespace Leitura {
@@ -26,12 +28,19 @@ namespace Leitura {
         if (arq.is_open()) {
             while (! arq.eof() ) {
                 getline (arq, linha);
-                cout << linha << endl;
-                auto t = Tokenizer(linha, ';');
+                 auto t = Tokenizer(linha, ';');
                 while (t.hasNext()) {
                     string idFesta = t.next(),
                             idCasamento = t.next(),
                             local = t.next();
+
+                    if(con->getFesta(idFesta) != nullptr){
+                        throw Exc::idRepetidoExcecao("ID repetido " + idFesta + " na classe Festa.");
+                    }
+                    if(con->getCasamento(idCasamento) == nullptr){
+                        throw Exc::idNaoExisteExcecao("ID(s) de Casamento " + idCasamento + " não cadastrado na Festa de ID " + idFesta + ".");
+                    }
+
                     time_t dataFesta = cpp_util::parseDate(t.next(), cpp_util::DATE_FORMAT_PT_BR_SHORT);
                     string hora = t.next();
                     double preco = parseDouble(t.next(), LOCALE_PT_BR);

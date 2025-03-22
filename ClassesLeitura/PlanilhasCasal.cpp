@@ -8,6 +8,7 @@
 #include "../ClassesSistema/PessoaFisica.h"
 #include "../ClassesSistema/Controle.h"
 #include "../ClassesSistema/Casal.hpp"
+#include "../ClassesException/Exception.hpp"
 
 #include <fstream>
 #include <iostream>
@@ -26,17 +27,20 @@ namespace Leitura
             while (!arq.eof())
             {
                 getline(arq, linha);
-                std::cout << linha << std::endl;
                 auto t = Tokenizer(linha, ';');
                 while (t.hasNext())
                 {
                     string idLar = t.next();
+                    if(con->getLar(idLar) != nullptr){
+                        throw Exc::idRepetidoExcecao("ID repetido " + idLar + " na classe Lar.");
+                    }
                     if (idLar.length() <3) {
                         break;
                     }
                     string  idPessoa1 = t.next(),
                             idPessoa2 = t.next(),
                             rua = t.next();
+
                     int numero = stoi(t.next());
                     string complemento = t.next();
                     
@@ -55,7 +59,13 @@ namespace Leitura
                         c->setLar(l);
                     }else
                     {
-                        //EXCEPTION PESSOA INEXISTENTE
+                        if(con->getPessoaFisica(idPessoa1) == nullptr){
+                            if(con->getPessoaFisica(idPessoa2) == nullptr){
+                                throw Exc::idNaoExisteExcecao("ID(s) de Pessoa " + idPessoa1 + " " + idPessoa2 + " não cadastrado no Lar de ID " + idLar + ".");
+                            }else{
+                                throw Exc::idNaoExisteExcecao("ID(s) de Pessoa " + idPessoa1 + " não cadastrado no Lar de ID " + idLar + ".");
+                            }
+                        } else throw Exc::idNaoExisteExcecao("ID(s) de Pessoa " + idPessoa2 + " não cadastrado no Lar de ID " + idLar + ".");
                     }                                                          
                 }
             }
@@ -71,12 +81,16 @@ namespace Leitura
             while (!arq.eof())
             {
                 getline(arq, linha);
-                std::cout << linha << std::endl;
                 auto t = Tokenizer(linha, ';');
                 while (t.hasNext())
                 {
                     string  idCasamento = t.next(), idPessoa1 = t.next(),
                             idPessoa2 = t.next();
+                    
+                    if(con->getCasamento(idCasamento) != nullptr){
+                        throw Exc::idRepetidoExcecao("ID repetido " + idCasamento + " na classe Casamento.");
+                    }
+
                     time_t data = cpp_util::parseDate(t.next(), cpp_util::DATE_FORMAT_PT_BR_SHORT);
                     string hora = t.next(), local = t.next();
                     
@@ -95,7 +109,13 @@ namespace Leitura
                         c->setCasamento(casamento);
                     }else
                     {
-                        //EXCEPTION PESSOA INEXISTENTE
+                        if(con->getPessoaFisica(idPessoa1) == nullptr){
+                            if(con->getPessoaFisica(idPessoa2) == nullptr){
+                                throw Exc::idNaoExisteExcecao("ID(s) de Pessoa " + idPessoa1 + " " + idPessoa2 + " não cadastrado no Casamento de ID " + idCasamento + ".");
+                            }else{
+                                throw Exc::idNaoExisteExcecao("ID(s) de Pessoa " + idPessoa1 + " não cadastrado no Casamento de ID " + idCasamento + ".");
+                            }
+                        } else throw Exc::idNaoExisteExcecao("ID(s) de Pessoa " + idPessoa2 + " não cadastrado no Casamento de ID " + idCasamento + ".");
                     }                   
                 }                
             }            

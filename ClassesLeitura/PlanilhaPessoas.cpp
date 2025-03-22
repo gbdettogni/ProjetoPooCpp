@@ -11,6 +11,7 @@
 #include "../ClassesAjudantes/NumberUtils.hpp"
 #include "../ClassesSistema/PessoaFisica.h"
 #include "../ClassesSistema/Loja.h"
+#include "../ClassesException/Exception.hpp"
 
 #include <fstream>
 #include <iostream>
@@ -25,14 +26,18 @@ namespace Leitura {
         if (arq.is_open()) {
             while (! arq.eof() ) {
                 getline (arq, linha);
-                cout << linha << endl;
-                auto t = Tokenizer(linha, ';');
+                 auto t = Tokenizer(linha, ';');
                 while (t.hasNext()) {
                     string id = t.next(),
                         tipo = t.next(),     //dados comuns a Pessoa
                         nome = t.next(),
                         telefone = t.next(),
                         endereco = t.next();
+
+                    if(con->getPessoaFisica(id) != nullptr || con->getPessoaJuridica(id) != nullptr || con->getLoja(id) != nullptr){
+                        throw Exc::idRepetidoExcecao("ID repetido " + id + " na classe Pessoa.");
+                    }
+
                     if(!tipo.compare("F")){       //dados adicionais PessoaFísica
                         string cpf = t.next();
 

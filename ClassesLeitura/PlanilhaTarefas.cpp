@@ -9,7 +9,7 @@
 #include "../ClassesAjudantes/DateUtils.hpp"
 #include "../ClassesAjudantes/NumberUtils.hpp"
 #include "../ClassesSistema/Tarefa.h"
-
+#include "../ClassesException/Exception.hpp"
 
 using namespace std;
 
@@ -21,12 +21,19 @@ namespace Leitura {
         if (arq.is_open()) {
             while (! arq.eof() ) {
                 getline (arq, linha);
-                cout << linha << endl;
-                auto t = Tokenizer(linha, ';');
+                 auto t = Tokenizer(linha, ';');
                 while (t.hasNext()) {
                     string idTarefa = t.next(),
                             idLar = t.next(),
                             idPrestador = t.next();
+
+                    if(con->getTarefa(idTarefa) != nullptr){
+                        throw Exc::idRepetidoExcecao("ID repetido " + idTarefa + " na classe Tarefa.");
+                    }
+                    if(con->getLar(idLar) == nullptr){
+                        throw Exc::idNaoExisteExcecao("ID(s) de Lar " + idLar + " não cadastrado na Tarefa de ID " + idTarefa + ".");
+                    }
+                    
                     time_t data = cpp_util::parseDate(t.next(), cpp_util::DATE_FORMAT_PT_BR_SHORT);
 
                     int prazo = stoi(t.next());
@@ -43,7 +50,7 @@ namespace Leitura {
                         send = con->getPessoaJuridica(idPrestador);
                     }else if (con->getLoja(idPrestador) != nullptr) {
                         send = con->getLoja(idPrestador);
-                    }
+                    }else throw Exc::idNaoExisteExcecao("ID(s) de Prestador de Serviço " + idPrestador + " não cadastrado na Tarefa de ID " + idTarefa + ".");
 
                     auto *tarefa = new Sistema::Tarefa(idTarefa, valorPrestador, data, prazo,send, p);
 

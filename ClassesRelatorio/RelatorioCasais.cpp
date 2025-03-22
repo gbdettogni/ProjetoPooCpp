@@ -7,7 +7,7 @@
 #include "../ClassesAjudantes/DateUtils.hpp"
 #include "../ClassesAjudantes/NumberUtils.hpp"
 #include "../ClassesSistema/Controle.h"
-
+#include "../ClassesException/Exception.hpp"
 
 namespace Relatorio{
     void RelatorioCasais::geraRelatorioCasais(const string &pasta, Sistema::Controle * con){
@@ -20,6 +20,7 @@ namespace Relatorio{
                 arq << c << endl;
             }
         }
+        else throw Exc::IOExcecao("Erro de I/O");
     }
     list<Casal*> RelatorioCasais::ordenaRelatorioCasais(Controle *con){
         list<Casal*> casaisProcessados;
