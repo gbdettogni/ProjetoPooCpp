@@ -36,6 +36,10 @@ public:
         delete parcela;
     };
 
+    [[nodiscard]] Parcela * getParcela() const {
+        return parcela;
+    }
+
     void imprimeCompras() const;
 };
 

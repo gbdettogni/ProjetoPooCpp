@@ -28,7 +28,9 @@ namespace Sistema{
             for (auto tarefa : tarefas) {
                 delete tarefa;
             }
-        };
+        }
+
+        list<Parcela *> getParcelasTarefasCompras();;
     };
     
     

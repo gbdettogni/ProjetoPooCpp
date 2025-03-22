@@ -47,10 +47,11 @@ namespace Leitura {
                     double preco = parseDouble(t.next(), LOCALE_PT_BR);
                     int numParcelas = stoi(t.next());
 
-                    auto p = new Sistema::Parcela(numParcelas, preco, cpp_util::parseDate("16/10/2004", cpp_util::DATE_FORMAT_PT_BR_SHORT));
+
                     
                     
                     auto *loja = con->getLoja(idLoja);
+                    auto p = new Sistema::Parcela(numParcelas, preco*quantidade, con->getTarefa(idTarefa)->getData());
                     auto* comp = new Sistema::Compra(nome, quantidade, preco, loja, p);
 
 

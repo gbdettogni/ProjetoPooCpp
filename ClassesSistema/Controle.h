@@ -20,7 +20,8 @@ namespace Sistema {
 
 class Controle {
 private:
-     unordered_map<string, PessoaFisica*> pessoasFisicas;
+    string gambiarra(string data);
+    unordered_map<string, PessoaFisica*> pessoasFisicas;
      unordered_map<string, PessoaJuridica*> pessoasJuridicas;
      unordered_map<string, Loja*> lojas;
      unordered_map<string, Festa*> festas;
@@ -29,6 +30,7 @@ private:
      unordered_map<string, Lar*> lares;
      unordered_map<string, Tarefa*> tarefas;
      unordered_map<string, Compra*> compras;
+    time_t inicioDosTempos = cpp_util::parseDate("16/10/2099", cpp_util::DATE_FORMAT_PT_BR_SHORT);
 
 public:
     Controle() = default;
@@ -50,7 +52,12 @@ public:
         {
             delete iter.second;
         }
-    };
+    }
+
+    void somaParcelas();
+
+
+     void processaParcelas();;
 
      [[nodiscard]] unordered_map<string, PessoaFisica *> pessoas_fisicas() const {
          return pessoasFisicas;
@@ -84,7 +91,7 @@ public:
          return casais;
      }
 
-     void add(string id, PessoaFisica * pf);
+    void add(string id, PessoaFisica * pf);
     void add(string id, Casal *c);
     void add(string id, Casamento *c);
     void add(string id, Lar *l);

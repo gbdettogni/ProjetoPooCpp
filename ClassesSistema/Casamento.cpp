@@ -21,8 +21,13 @@ namespace Sistema{
         printf("Local: %s\n", local.c_str());
         cout << "Data: " + cpp_util::formatDate(data, cpp_util::DATE_FORMAT_PT_BR_SHORT) << endl;
         printf("Hora: %s\n", hora.c_str());
-        if(festa != NULL){
+        if(festa != nullptr){
             festa->imprimeFesta();
         }
+    }
+
+    Parcela *Casamento::getParcelasFesta() {
+        if (festa == nullptr){return nullptr;}
+        return festa->getParcelasFesta();
     }
 }

@@ -1,15 +1,69 @@
 #include "Casal.hpp"
+
+#include "../ClassesAjudantes/DateUtils.hpp"
 #include "../ClassesAjudantes/NumberUtils.hpp"
 #include <cctype>
 using namespace std;
 
 namespace Sistema{
+    time_t Casal::somadorParcelas() {
+        list<Parcela*> parcelas;
+        if (casamento != nullptr){
+            Parcela* pFesta = casamento->getParcelasFesta();
+            if (pFesta != nullptr) {
+                parcelas.push_back(pFesta);
+            }
+        }
+        if (lar != nullptr) {
+            list<Parcela*> psTarefasCompras = lar->getParcelasTarefasCompras();
+            parcelas.splice(parcelas.end(), psTarefasCompras);
+        }
+        somaParcelas = parcelas;
+        for (Parcela* p : parcelas) {
+            if (p->getData() < inicioDosTempos) {
+                inicioDosTempos = p->getData();
+            }
+        }
+        return inicioDosTempos;
+    }
+
+    bool Casal::processaParcelas(time_t dataAtual) {
+        bool ativo = false;
+        double debito = 0;
+        for (Parcela* p : somaParcelas) {
+            if (!Parcela::existente(p)) {
+                if (p->ativa(dataAtual)) {
+                    ativo = true;
+                    debito += p->getValor();
+                }
+            }
+        }
+        somaParcelas.remove_if(Parcela::existente);
+        if (ativo) {
+            poupancaConjunta *= 1.005;
+            if (!cpp_util::formatDate(dataAtual, cpp_util::DATE_FORMAT_PT_BR_SHORT).substr(3, 2).compare("12")) {
+                poupancaConjunta += 2*salarioConjunto - gastoConjunto - debito;
+            }else {
+                poupancaConjunta += salarioConjunto - gastoConjunto - debito;
+            }
+            historico.push_back(poupancaConjunta);
+            // printf("casal: %s, poupanca %.2f\n", pessoa1->getNome().c_str(), poupancaConjunta);
+        }
+        if (somaParcelas.empty()) {
+            return false;
+        };
+        return true;
+    }
+
     void Casal::imprimeCasal() {
         printf("Casal, formado pelos seguintes sujeitos:\n");
         pessoa1->imprimeSujeito();
         pessoa2->imprimeSujeito();
         lar->imprimeLar();
         casamento->imprimeCasamento();
+        for (Parcela* p : somaParcelas) {
+            p->imprimeParcela();
+        }
     }
 
     void Casal::existo(){
@@ -28,6 +82,9 @@ namespace Sistema{
         }
         casamento = nullptr;
         lar = nullptr;
+        poupancaConjunta = pessoa1->getPoupanca() + pessoa2->getPoupanca();
+        salarioConjunto = pessoa1->getSalario() + pessoa2->getSalario();
+        gastoConjunto = pessoa1->getGastos() + pessoa2->getGastos();
 
         casamentosConjuntos = 0;
         gastoTotal = 0;
@@ -66,7 +123,7 @@ namespace Sistema{
         for (auto & iter : festas)
         {
             Festa* c = iter.second; // pointer to Node
-                
+
             bool p1 = false, p2 = false;
             for(string convidado : c->getListaConvidados()){
                 if(convidado.compare(n1) == 0) p1 = true;
@@ -76,7 +133,7 @@ namespace Sistema{
                     break;
                 }
             }
-                
+
         }
         //std::cout << "casamentos conjuntos: " << casamentosConjuntos << std::endl;
     }
@@ -89,7 +146,7 @@ namespace Sistema{
     }
 
     bool Casal::comparaCasal(Casal *c1, Casal *c2){ //para sorting
-        if(c1->getGastoTotal() > c2->getGastoTotal() ||    (c1->getGastoTotal() == c2->getGastoTotal() && 
+        if(c1->getGastoTotal() > c2->getGastoTotal() ||    (c1->getGastoTotal() == c2->getGastoTotal() &&
                                                             c1->getPessoa1()->getNome().compare(c2->getPessoa1()->getNome()) < 0)) return true;
         else return false;
     }

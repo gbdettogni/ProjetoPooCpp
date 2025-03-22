@@ -19,11 +19,21 @@ public:
     Parcela(int num_inicial, double valor, time_t data_inicio)
         : numInicial(num_inicial),
           numAtual(num_inicial),
-          valor(valor),
+          valor(valor/numInicial),
           dataInicio(data_inicio) {
     }
 
     ~Parcela() = default;
+
+    void imprimeParcela();
+    bool static existente(Parcela* p);
+    bool ativa(time_t time);
+
+    [[nodiscard]] double getValor() const {
+        return valor;
+    }
+
+    time_t getData();
 };
 
 } // Sistema

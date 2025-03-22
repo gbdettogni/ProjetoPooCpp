@@ -45,7 +45,11 @@ public:
           for (Compra *cp : compras) {
                delete cp;
           }
-     };
+     }
+
+     list<Parcela *> getParcelasTarefasCompras();
+
+     time_t getData();;
 };
 
 } // Sistema

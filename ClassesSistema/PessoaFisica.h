@@ -37,6 +37,22 @@ public:
     void addToList();
 
     void imprimeSujeito();
+
+    [[nodiscard]] double getPoupanca() const {
+        return poupanca;
+    }
+
+    [[nodiscard]] double getSalario() const {
+        return salario;
+    }
+
+    [[nodiscard]] double getGastos() const {
+        return gastos;
+    }
+
+    [[nodiscard]] string getCpf() const {
+        return cpf;
+    }
 };
 
 } // Sistema

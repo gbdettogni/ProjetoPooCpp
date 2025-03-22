@@ -3,6 +3,8 @@
 #include <string>
 #include <unordered_map>
 
+#include "../ClassesAjudantes/DateUtils.hpp"
+
 using namespace std;
 #include "PessoaFisica.h"
 #include "Lar.hpp"
@@ -12,26 +14,46 @@ namespace Sistema
 {
 class Casal {
 private:
-    PessoaFisica *pessoa1, *pessoa2;    
+    PessoaFisica *pessoa1, *pessoa2;
     Casamento *casamento;
     Lar *lar;
+    time_t inicioDosTempos = cpp_util::parseDate("16/10/2099", cpp_util::DATE_FORMAT_PT_BR_SHORT);
     //list<Parcela> parcelasTotais;
 
     double  poupancaConjunta,
             salarioConjunto,
             gastoConjunto,
             gastoTotal;
+    list<double> historico;
 
     int casamentosConjuntos;
 
+    list<Parcela*> somaParcelas;
+
 public:
+    [[nodiscard]] time_t getInicioDosTempos() const {
+        return inicioDosTempos;
+    }
+
+    [[nodiscard]] list<double> getHistorico() const {
+        return historico;
+    }
+
     Casal(PessoaFisica *p1, PessoaFisica *p2);
     void setLar(Lar *l);
     void setCasamento(Casamento *c);
     ~Casal() {
         delete casamento;
         delete lar;
-    };
+    }
+
+    time_t somadorParcelas();
+
+    [[nodiscard]] PessoaFisica * getPessoa1() const {
+        return pessoa1;
+    }
+
+    bool processaParcelas(time_t dataAtual);;
 
     void imprimeCasal();
 
