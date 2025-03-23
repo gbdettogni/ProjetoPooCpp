@@ -20,7 +20,7 @@ namespace Sistema {
 
 class Controle {
 private:
-    string gambiarra(string data);
+    string nextData(string data);
     unordered_map<string, PessoaFisica*> pessoasFisicas;
      unordered_map<string, PessoaJuridica*> pessoasJuridicas;
      unordered_map<string, Loja*> lojas;

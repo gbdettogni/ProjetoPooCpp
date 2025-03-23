@@ -38,11 +38,11 @@ namespace Sistema {
             if (!ativo) {
                 return;
             }
-            data = gambiarra(data);
+            data = nextData(data);
         }
     }
 
-    string Controle::gambiarra(string data) {
+    string Controle::nextData(string data) {
         int dias[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         string novaData;
         int dia, mes, ano;

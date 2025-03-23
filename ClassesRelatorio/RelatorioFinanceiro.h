@@ -21,7 +21,7 @@ public:
     static void geraRelatorioFinanceiro(const std::string &pasta, Sistema::Controle * con, list<cpp_utils::Pair*> cpfs);
 
 private:
-    static string gambiarra(string data);
+    static string nextData(string data);
 
 };
 

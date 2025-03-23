@@ -38,7 +38,7 @@ namespace Relatorio {
                     rf->gastos = format("{};{}", c->getPessoa1()->getNome(), c->getPessoa2()->getNome());
                     for (double h : hist) {
                         rf->meses = format("{};{}", rf->meses, data.substr(3, 7));
-                        data = gambiarra(data);
+                        data = nextData(data);
                         rf->gastos = format("{};R$ {}", rf->gastos, formatDoubleCurrency(h, LOCALE_PT_BR));
                     }
                     rf->meses = format("{}\n", rf->meses);
@@ -51,7 +51,7 @@ namespace Relatorio {
         }
     }
 
-    string RelatorioFinanceiro::gambiarra(string data) {
+    string RelatorioFinanceiro::nextData(string data) {
         int dias[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
         string novaData;
         int dia, mes, ano;
