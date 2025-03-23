@@ -20,19 +20,11 @@ protected:
     bool prestador;
     double valorRecebido;
 public:
-    Pessoa(const string &id, const string &nome, const string &telefone, const string &endereco
-        )
-        : id(id),
-          nome(nome),
-          telefone(telefone),
-          endereco(endereco)
-
-          {
-    }
+    Pessoa(const string &id, const string &nome, const string &telefone, const string &endereco);
 
     string getNome();
 
-    ~Pessoa() = default;
+    ~Pessoa(){}
 
     static void func();
 };

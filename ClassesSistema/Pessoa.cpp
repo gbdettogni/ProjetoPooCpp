@@ -10,6 +10,13 @@ namespace Sistema {
         std::cout << "Pessoa" << std::endl;
     }
 
+    Pessoa::Pessoa(const string &_id, const string &_nome, const string &_telefone, const string &_endereco) {
+        id = _id;
+        nome = _nome;
+        telefone = _telefone;
+        endereco = _endereco;
+    }
+
     string Pessoa::getNome(){
         return this->nome;
     }

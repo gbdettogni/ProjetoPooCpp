@@ -33,7 +33,7 @@ private:
     time_t inicioDosTempos = cpp_util::parseDate("16/10/2099", cpp_util::DATE_FORMAT_PT_BR_SHORT);
 
 public:
-    Controle() = default;
+    Controle();
 
     ~Controle() {
         for (const auto & iter : casais1())

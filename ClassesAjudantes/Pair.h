@@ -10,13 +10,10 @@ namespace cpp_utils {
 
 class Pair {
 public:
-    const std::string member1;
-    const std::string member2;
+    std::string member1;
+    std::string member2;
 
-    Pair(const std::string member1, const std::string member2)
-        : member1(member1),
-          member2(member2) {
-    }
+    Pair(std::string member1, std::string member2);
 };
 
 } // cpp_utils

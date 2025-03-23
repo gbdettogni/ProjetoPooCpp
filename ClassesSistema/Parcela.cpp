@@ -11,6 +11,13 @@
 #include "../ClassesAjudantes/DateUtils.hpp"
 
 namespace Sistema {
+    Parcela::Parcela(int num_inicial, double _valor, time_t data_inicio) {
+        numInicial = num_inicial;
+        numAtual = num_inicial;
+        valor = _valor/numInicial;
+        dataInicio = data_inicio;
+    }
+
     void Parcela::imprimeParcela() {
         printf("Parcela no valor de %f, comecando em %s, por %d meses\n", valor, cpp_util::formatDate(dataInicio, cpp_util::DATE_FORMAT_PT_BR_SHORT).c_str(), numInicial);
     }

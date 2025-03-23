@@ -16,6 +16,15 @@ namespace Sistema {
         compras.push_back(cp);
     }
 
+    Tarefa::Tarefa(const string &_id, double _preco, time_t _data, int _prazo, Pessoa *_prestador, Parcela *_parcela) {
+        id = _id;
+        preco = _preco;
+        data = _data;
+        prazo = _prazo;
+        prestador = _prestador;
+        parcela = _parcela;
+    }
+
     double Tarefa::getPrecoTarefa(){
         double precoTarefa = preco;
         for(Compra *c : compras){

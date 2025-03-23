@@ -22,6 +22,17 @@ namespace Sistema {
         
     }
 
+    Festa::Festa(const string &_local, double preco_pago, time_t _data, const string &_horario,
+        const list<string> &lista_convidados, Parcela *_parcela) {
+        local = _local;
+        precoPago = preco_pago;
+        data = _data;
+        horario = _horario;
+        listaConvidados = lista_convidados;
+        parcela = _parcela;
+
+    }
+
     double Festa::getPrecoPago(){
         return precoPago;
     }

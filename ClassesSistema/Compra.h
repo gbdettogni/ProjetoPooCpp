@@ -22,13 +22,7 @@ private:
     Parcela* parcela;
 
 public:
-    Compra(const string &nome_produto, int quantidade, double preco_unidade, Loja *loja, Parcela *parcela)
-        : nomeProduto(nome_produto),
-          quantidade(quantidade),
-          precoUnidade(preco_unidade),
-          loja(loja),
-          parcela(parcela) {
-    }
+    Compra(const string &nome_produto, int quantidade, double preco_unidade, Loja *loja, Parcela *parcela);
 
     double getPreco();
 

@@ -15,6 +15,11 @@
 #include "../ClassesAjudantes/NumberUtils.hpp"
 
 namespace Relatorio {
+    RelatorioFinanceiro::RelatorioFinanceiro(const string &_meses, const string &_gastos) {
+        meses = _meses;
+        gastos = _gastos;
+    }
+
     void RelatorioFinanceiro::geraRelatorioFinanceiro(const std::string &pasta, Sistema::Controle * con,  list<cpp_utils::Pair*> cpfs) {
         ofstream arq(pasta + "saida/1-planejamento.csv");
 
@@ -23,20 +28,25 @@ namespace Relatorio {
             for (cpp_utils::Pair *p : cpfs) {
                 Sistema::Casal* c = con->getCasal(p->member1, p->member2);
                 list<double> hist = c->getHistorico();
-                auto* rf = new RelatorioFinanceiro("", "");
-                string data = cpp_util::formatDate(c->getInicioDosTempos(), cpp_util::DATE_FORMAT_PT_BR_SHORT);
-                rf->meses = "Nome 1;Nome 2";
-                rf->gastos = format("{};{}", c->getPessoa1()->getNome(), c->getPessoa2()->getNome());
-                for (double h : hist) {
-                    rf->meses = format("{};{}", rf->meses, data.substr(3, 7));
-                    data = gambiarra(data);
-                    rf->gastos = format("{};R$ {}", rf->gastos, formatDoubleCurrency(h, LOCALE_PT_BR));
+
+                if (hist.empty()) {
+                    arq << "Casal com CPFs " << p->member1 <<" e " << p->member2 << " não possui gastos cadastrados.\n";
+                }else {
+                    auto* rf = new RelatorioFinanceiro("", "");
+                    string data = cpp_util::formatDate(c->getInicioDosTempos(), cpp_util::DATE_FORMAT_PT_BR_SHORT);
+                    rf->meses = "Nome 1;Nome 2";
+                    rf->gastos = format("{};{}", c->getPessoa1()->getNome(), c->getPessoa2()->getNome());
+                    for (double h : hist) {
+                        rf->meses = format("{};{}", rf->meses, data.substr(3, 7));
+                        data = gambiarra(data);
+                        rf->gastos = format("{};R$ {}", rf->gastos, formatDoubleCurrency(h, LOCALE_PT_BR));
+                    }
+                    rf->meses = format("{}\n", rf->meses);
+
+                    arq << rf << endl;
+
+                    delete rf;
                 }
-                rf->meses = format("{}\n", rf->meses);
-
-                arq << rf << endl;
-
-                delete rf;
             }
         }
     }

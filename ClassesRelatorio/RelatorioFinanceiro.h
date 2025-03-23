@@ -16,10 +16,7 @@ class RelatorioFinanceiro {
     string gastos;
 
 public:
-    RelatorioFinanceiro(const string &meses, const string &gastos)
-        : meses(meses),
-          gastos(gastos) {
-    }
+    RelatorioFinanceiro(const string &meses, const string &gastos);
     friend ostream& operator<< (ostream &stream, RelatorioFinanceiro *rf);
     static void geraRelatorioFinanceiro(const std::string &pasta, Sistema::Controle * con, list<cpp_utils::Pair*> cpfs);
 

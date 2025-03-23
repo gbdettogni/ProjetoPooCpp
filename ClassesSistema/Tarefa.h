@@ -25,14 +25,7 @@ private:
      list<Compra*> compras;
      Parcela* parcela;
 public:
-     Tarefa(const string &id, double preco, time_t data, int prazo, Pessoa *prestador, Parcela *parcela)
-          : id(id),
-            preco(preco),
-            data(data),
-            prazo(prazo),
-            prestador(prestador),
-            parcela(parcela) {
-     }
+     Tarefa(const string &id, double preco, time_t data, int prazo, Pessoa *prestador, Parcela *parcela);
 
      double getPrecoTarefa();
 

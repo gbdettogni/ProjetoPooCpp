@@ -23,14 +23,7 @@ private:
 
 public:
      Festa(const string &local, double preco_pago, time_t data, const string &horario,
-          const list<string> &lista_convidados, Parcela *parcela)
-          : local(local),
-            precoPago(preco_pago),
-            data(data),
-            horario(horario),
-            listaConvidados(lista_convidados),
-            parcela(parcela) {
-     }
+          const list<string> &lista_convidados, Parcela *parcela);
 
      double getPrecoPago();
 

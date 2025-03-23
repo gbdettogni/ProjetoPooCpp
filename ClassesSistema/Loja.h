@@ -15,7 +15,7 @@ public:
         : PessoaJuridica(id, nome, telefone, endereco, cnpj) {
     }
 
-    ~Loja() = default;
+    ~Loja(){}
 };
 
 } // Sistema

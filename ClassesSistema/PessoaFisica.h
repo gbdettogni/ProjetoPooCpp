@@ -23,16 +23,16 @@ private:
 public:
     PessoaFisica(const string &id, const string &nome, const string &telefone,
         const string &endereco, time_t data_nascimento,
-        const string &cpf, double poupanca, double salario, double gastos)
-        : Pessoa(id, nome, telefone, endereco),
-          dataNascimento(data_nascimento),
-          cpf(cpf),
-          poupanca(poupanca),
-          salario(salario),
-          gastos(gastos) {
+        const string &_cpf, double _poupanca, double _salario, double _gastos)
+        : Pessoa(id, nome, telefone, endereco) {
+        dataNascimento = data_nascimento;
+        cpf = _cpf;
+        poupanca = _poupanca;
+        salario = _salario;
+        gastos = _gastos;
     }
 
-    ~PessoaFisica() = default;
+    ~PessoaFisica(){}
 
     void addToList();
 

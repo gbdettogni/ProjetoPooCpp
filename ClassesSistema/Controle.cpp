@@ -10,6 +10,9 @@
 #include "../ClassesAjudantes/DateUtils.hpp"
 
 namespace Sistema {
+    Controle::Controle() {
+    }
+
     void Controle::somaParcelas() {
         for (const auto & iter : casais1())
         {

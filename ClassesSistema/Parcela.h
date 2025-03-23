@@ -16,14 +16,9 @@ private:
     time_t dataInicio;
 
 public:
-    Parcela(int num_inicial, double valor, time_t data_inicio)
-        : numInicial(num_inicial),
-          numAtual(num_inicial),
-          valor(valor/numInicial),
-          dataInicio(data_inicio) {
-    }
+    Parcela(int num_inicial, double valor, time_t data_inicio);
 
-    ~Parcela() = default;
+    ~Parcela(){};
 
     void imprimeParcela();
     bool static existente(Parcela* p);
